@@ -35,7 +35,6 @@ window.runScript = scriptName => {
 
 const mainContent = document.querySelector('main')
 
-// echo "const scripts = ["$(ls examples/*.js | sed -e "s/examples\///g" -e "s/^/'/g" -e "s/$/'/g" | tr '\n' ',' | sed 's/,$//')"]"
 const scripts = ['script1.js', 'script2.js']
 
 scripts.forEach((scriptName, index) => {
