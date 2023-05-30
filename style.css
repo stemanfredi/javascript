@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  width: 58em;
+  width: 56em;
   max-width: 100%;
 }
 
@@ -15,12 +15,13 @@ main {
   margin: 1em;
   padding: 1em;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: auto;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .run-button {
+  font-size: 16px;
   border: none;
   background-color: transparent;
   cursor: pointer;

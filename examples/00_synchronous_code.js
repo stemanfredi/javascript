@@ -2,9 +2,7 @@
 
 const test = () => {
   console.log('Start of code')
-
   alert('Notice me!')
-
   console.log('End of code')
 }
 
