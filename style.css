@@ -7,15 +7,25 @@ body {
 }
 
 main {
+  width: 58em;
   max-width: 100%;
 }
 
 .code-block {
-  width: 56em;
   margin: 1em;
   padding: 1em;
   background: #fff;
   border-radius: 10px;
   overflow: auto;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.run-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  color: #646464;
 }

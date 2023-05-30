@@ -5,7 +5,8 @@ const createCodeBlock = (scriptName, codeElementId) => {
   blockDiv.className = 'code-block'
 
   const button = document.createElement('button')
-  button.textContent = `Run ${scriptName}`
+  button.className = 'run-button'
+  button.textContent = '\u25B6\u00A0' + scriptName
   button.onclick = () => runScript(scriptName)
   blockDiv.appendChild(button)
 
