@@ -35,7 +35,7 @@ window.runScript = scriptName => {
 
 const mainContent = document.querySelector('main')
 
-const scripts = ['script1.js', 'script2.js']
+const scripts = ['00_synchronous.js', 'script2.js']
 
 scripts.forEach((scriptName, index) => {
   const codeElementId = `code${index + 1}`
