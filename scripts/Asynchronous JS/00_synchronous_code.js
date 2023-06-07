@@ -1,5 +1,3 @@
-'use strict'
-
 const test = () => {
   console.log('Start of code')
   alert('Notice me!')

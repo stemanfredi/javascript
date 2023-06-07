@@ -1,5 +1,3 @@
-'use strict'
-
 const test = () => {
   // The setTimeout() function takes two arguments: a callback function, and
   // the delay (in milliseconds) after which the function should be executed.
