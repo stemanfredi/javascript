@@ -55,7 +55,7 @@ window.runScript = scriptName => {
 }
 
 const buildMain = async topic => {
-  const mainContent = document.querySelector('main')
+  const mainContent = document.getElementById('main-content')
   mainContent.innerHTML = ''
   scripts[topic].forEach((scriptName, index) => {
     const codeElementId = 'code' + index

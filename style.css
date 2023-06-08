@@ -6,30 +6,22 @@
 
 body {
   display: flex;
-  align-items: center;
-  flex-direction: column;
   height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
 nav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  padding: 0.5em;
-  border-right: 1px solid #ddd;
+  flex: 0 0 auto; /* grow shrink basis */
+  overflow-y: auto;
+  background-color: #eee;
 }
 
 nav a {
   display: block;
   padding: 0.5em;
-  background: #eee;
   color: #333;
   text-decoration: none;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
 }
 
 nav a:hover,
@@ -38,9 +30,14 @@ nav a.active {
 }
 
 main {
-  margin: 0 auto;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#main-content {
   width: 56em;
   max-width: 100%;
+  margin: auto;
 }
 
 .code-block {
@@ -59,4 +56,18 @@ main {
   cursor: pointer;
   display: inline-block;
   color: #646464;
+}
+
+@media (max-width: 66em) {
+  body {
+    flex-direction: column;
+  }
+
+  nav {
+    margin: 1em auto 0 auto;
+  }
+
+  main {
+    overflow-y: visible;
+  }
 }
