@@ -6,21 +6,63 @@
 
 body {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2em;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+#menu-button {
+  position: absolute;
+  left: 0;
+  border: none;
+  background-color: transparent;
+  height: 1.4em;
+  width: 1.4em;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+#menu-button,
+h1,
+nav a,
+.run-button {
+  color: #444;
+}
+
 nav {
-  flex: 0 0 auto; /* grow shrink basis */
-  overflow-y: auto;
+  position: fixed;
+  top: 2em;
+  left: -12em;
+  width: 12em;
+  height: calc(100% - 2em);
   background-color: #eee;
+  transition: left 0.1s;
+  overflow-y: auto;
+}
+
+nav.show {
+  left: 0;
 }
 
 nav a {
   display: block;
   padding: 0.5em;
-  color: #333;
   text-decoration: none;
 }
 
@@ -30,7 +72,8 @@ nav a.active {
 }
 
 main {
-  flex-grow: 1;
+  margin-top: 2em;
+  height: calc(100% - 2em);
   overflow-y: auto;
 }
 
@@ -50,24 +93,9 @@ main {
 }
 
 .run-button {
-  font-size: 16px;
+  font-size: 1em;
   border: none;
   background-color: transparent;
   cursor: pointer;
   display: inline-block;
-  color: #646464;
-}
-
-@media (max-width: 66em) {
-  body {
-    flex-direction: column;
-  }
-
-  nav {
-    margin: 1em auto 0 auto;
-  }
-
-  main {
-    overflow-y: visible;
-  }
 }

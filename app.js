@@ -56,6 +56,7 @@ window.runScript = scriptName => {
 
 const buildMain = async topic => {
   const mainContent = document.getElementById('main-content')
+  title.innerHTML = topic
   mainContent.innerHTML = ''
   scripts[topic].forEach((scriptName, index) => {
     const codeElementId = 'code' + index
@@ -85,5 +86,13 @@ const buildNav = () => {
   })
 }
 
+const menuButton = document.getElementById('menu-button')
+const title = document.querySelector('h1')
+
 buildNav()
 buildMain(topics[0])
+
+menuButton.onclick = e => {
+  e.preventDefault()
+  document.querySelector('nav').classList.toggle('show')
+}
