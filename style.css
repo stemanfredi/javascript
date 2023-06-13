@@ -32,6 +32,15 @@ header {
   width: 1.4em;
   font-size: 1.4em;
   cursor: pointer;
+  content: 'uno';
+}
+
+#menu-button::before {
+  content: '\2630';
+}
+
+#menu-button.close::before {
+  content: '\00D7';
 }
 
 h1 {
@@ -52,7 +61,7 @@ nav {
   width: 12em;
   height: calc(100% - 2em);
   background-color: #eee;
-  transition: left 0.1s;
+  transition: left 0.2s;
   overflow-y: auto;
 }
 

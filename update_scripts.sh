@@ -9,11 +9,11 @@ echo -n "const scripts = {" > $tempFile
 # enable handling of filenames with spaces
 IFS=$'\n'
 
-for dir in $(find scripts -mindepth 1 -maxdepth 1 -type d); do
+for dir in $(find scripts -mindepth 1 -maxdepth 1 -type d | sort); do
     dir_name=$(basename "$dir")
     echo -n "  '$dir_name': [" >> $tempFile
     
-    for file in $(find "$dir" -type f -name '*.js'); do
+    for file in $(find "$dir" -type f -name '*.js' | sort); do
         file_name=$(basename "$file")
         echo -n "    '$file_name'," >> $tempFile
     done

@@ -7,6 +7,9 @@ const scripts = {
     '02_callbacks.js',
     '03_callbacks.js',
     '04_callback_hell.js',
+    '05_promises.js',
+    '06_promises.js',
+    '07_promises.js',
   ],
   'Client-side storage': ['script1.js', 'script2.js'],
 }
@@ -95,4 +98,5 @@ buildMain(topics[0])
 menuButton.onclick = e => {
   e.preventDefault()
   document.querySelector('nav').classList.toggle('show')
+  menuButton.classList.toggle('close')
 }
